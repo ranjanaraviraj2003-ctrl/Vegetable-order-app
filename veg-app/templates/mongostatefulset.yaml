@@ -2,23 +2,23 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: {{ .Release.Name }}-mongo-statefulset
-  namespace: {{.Values.namespace}}
+  namespace: {{ .Values.namespace}}
 spec:
-  replicas: {{.Values.mongoStatefulset.replicas}}
+  replicas: {{ .Values.mongoStatefulset.replicas}}
   serviceName: {{ .Release.Name }}-mongo-service
   selector:
     matchLabels:
-      app: {{.Values.mongoStatefulset.labels.app}}
+      app: {{ .Values.mongoStatefulset.labels.app}}
   template:
     metadata:
       labels:
-        app: {{.Values.mongoStatefulset.labels.app}}
+        app: {{ .Values.mongoStatefulset.labels.app}}
     spec:
       containers:
-      - name: {{.Values.mongoStatefulset.name}}
-        image: {{.Values.mongoImage.repository}}:{{.Values.mongoImage.tag}}
+      - name: {{ .Values.mongoStatefulset.name}}
+        image: {{ .Values.mongoImage.repository}}:{{.Values.mongoImage.tag}}
         ports:
-        - containerPort: {{.Values.mongoPort}}
+        - containerPort: {{ .Values.mongoPort}}
         volumeMounts:
           - mountPath: /data/db
             name: {{ .Release.Name }}-mongo-data
@@ -37,4 +37,4 @@ spec:
         storageClassName: {{ .Release.Name }}-vegitable-sc
         resources:
           requests:
-            storage: {{.Values.pvc.resources.requests.storage}}
+            storage: {{ .Values.pvc.resources.requests.storage}}
