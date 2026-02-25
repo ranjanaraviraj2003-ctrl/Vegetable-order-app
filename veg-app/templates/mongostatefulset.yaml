@@ -32,8 +32,7 @@ spec:
     - metadata:
         name: {{ .Release.Name }}-mongo-data
       spec:
-        accessModes: 
-         - ReadWriteOnce
+        accessModes: {{ .Values.pvc.accessModes}}
         storageClassName: {{ .Release.Name }}-vegitable-sc
         resources:
           requests:
