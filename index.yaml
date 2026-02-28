@@ -3,6 +3,16 @@ entries:
   veg-app:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2026-02-28T16:45:18.775929128Z"
+    description: A Helm chart for Kubernetes
+    digest: c77ed91dd90c25dd418108c80b3a85320f6c785c9d4a4abdc392ef10a6747b1f
+    name: veg-app
+    type: application
+    urls:
+    - https://github.com/ranjanaraviraj2003-ctrl/Vegetable-order-app/releases/download/veg-app-0.2.3/veg-app-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2026-02-28T15:37:32.895798759Z"
     description: A Helm chart for Kubernetes
     digest: a1905437e574756f5f3de5fb4639b9605a62f35982e1119cd8ac03290a25b993
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/ranjanaraviraj2003-ctrl/Vegetable-order-app/releases/download/veg-app-0.1.4/veg-app-0.1.4.tgz
     version: 0.1.4
-generated: "2026-02-28T15:37:32.895825669Z"
+generated: "2026-02-28T16:45:18.775936872Z"
